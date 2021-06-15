@@ -18,19 +18,34 @@ namespace CalcIdade
             set { _nome = value.ToUpper();} //ToUpper(); Faz transforma uma string para maiuscula.
         }
 
+        //Implementando a propriedade Idade
+        private int _idade;
+        public int Idade
+        {
+            get { 
+                    this.CalcularIdade();
+                    return this._idade; 
+                }
+            
+        }
+        
+
         public void ExibirDados(){
             Console.WriteLine("Nome: " + this.Nome);
             Console.WriteLine("Ano de nascimento: " + this.AnoNascimento);
-            int idade = this.CalcularIdade();
-            Console.WriteLine("Idade: " + idade);
+            this.CalcularIdade();
+            Console.WriteLine("Idade: " + this.Idade);
+            //int idade = this.Idade;
+            //Console.WriteLine("Idade: " + idade);
         }
 
-        private int CalcularIdade(){
+        private /*int*/ void CalcularIdade(){
 
             DateTime data = DateTime.Now; //pega a data do sistema atual
             int  ano = data.Year;
-            int idade = ano - this.AnoNascimento;
-            return idade;
+            this._idade = ano - this.AnoNascimento;
+            //int idade = ano - this.AnoNascimento;
+            //return idade;
 
         }
         
