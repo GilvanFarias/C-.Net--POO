@@ -1,8 +1,19 @@
+using System.Globalization;
 using System;
+using System.Collections.Generic;
+//using Internal;
+//using System.Globalization;
 namespace CalcIdade
 {
     public class Pessoa
     {
+        //Criando construtor
+        public Pessoa(string _nomePessoa, int _anoNascimentoPessoa){
+            this.Nome = _nomePessoa;
+            this.AnoNascimento = _anoNascimentoPessoa;
+            this.CalcularIdade();
+        }
+
         //propfull atalho para métodos construtores(propriedade)
         private int _anoNascimento;
         public int AnoNascimento
