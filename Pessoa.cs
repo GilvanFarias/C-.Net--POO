@@ -7,7 +7,7 @@ namespace CalcIdade
 {
     public class Pessoa
     {
-        //Criando construtor
+        //Contrutor é um método publico para que possa interagir com ele que não possui um tipo(string,int)
         public Pessoa(string _nomePessoa, int _anoNascimentoPessoa){
             this.Nome = _nomePessoa;
             this.AnoNascimento = _anoNascimentoPessoa;
